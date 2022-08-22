@@ -1,0 +1,30 @@
+{{define "LoggedPost"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/layout.css">
+</head>
+<body>
+    <h1>Post your opinion here</h1>
+
+    {{.}}
+
+    
+  
+    <form action="/post" method="POST">
+        <div>
+        <input type="text" placeholder="Title" name="title">
+        <input type="text" placeholder="Category" name="category">
+        <input type="text" placeholder="Category2" name="category2">
+        <input type="text" placeholder="Post" name="body">
+        <input type="submit" value="postPost">
+        </div>
+    </form>
+    <a href="/homepage ">Back to posts</a>
+</body>
+</html>
+{{end}}

@@ -1,0 +1,33 @@
+{{define "Comments"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <a href="/comment">add you own comment</a>
+    
+        {{range $comment := . }}
+
+            <h1>user id: {{$comment.userID}}</h1>
+            <h3>created date: {{$comment.dateCreated}}</h3>
+            <h3>content: {{$comment.body}}</h3>
+            <br>
+            <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+            
+        {{end}}
+        <a href="/homepage">Back to posts</a>
+        <a href="/">Back home</a>
+        
+
+<form method="POST" action="/homepage">
+    
+</form>
+</body>
+</html>
+
+{{end}}
